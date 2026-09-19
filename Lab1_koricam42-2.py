@@ -8,14 +8,15 @@ Date: 9/17/26
 
 # Aliases import explanation (TBD)
 
-import rectangle 
-import circle 
+from rectangle import calc_area as rectangle_area, rectangle_perimeter
+from circle import calc_area as circle_area, circle_circumference
 
 # I modeled the print statements to match the output of the examples in the lab instuctions
 # But I'm not sure if the print output (of the non-math sections) has to match the example perfectly
 def main():
     while True:
         print("Geometry Calculator")
+        print("-------------------")
         print("1. Calculate Circle Area")
         print("2. Calculate Circle Circumference")
         print("3. Calculate Rectangle Area")
@@ -38,3 +39,5 @@ def main():
             break
         else:
             print("Invalid input. Options are only 1-5. Please try again.:")
+
+main()
