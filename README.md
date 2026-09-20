@@ -10,12 +10,16 @@ This project will use custom modules, importing files with aliases to prevent na
 
 ## Included Files
 
-Lab1_koricam42-2.py
-circle.py
-rectangle.py
+* Lab1_koricam42-2.py
+* 'circle.py'
+* 'rectangle.py'
 
 ## How to run
 Run main file (Lab1_koricam42-2.py) in your terminal and follow the onscreen prompts
 
 ## Acknowledgments
-[Source for README template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
+* [Source for README template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
+* [Source for Type Hints](https://www.geeksforgeeks.org/python/type-hints-in-python/)
+* [Source for math operations for the area of a circle](https://www.wikihow.com/Calculate-the-Area-of-a-Circle)
+* [Source for math operations for the circumference of a circle](https://www.wikihow.com/Calculate-the-Circumference-of-a-Circle)
+* [Source for Docstrings formatting](https://realpython.com/how-to-write-docstrings-in-python/)
