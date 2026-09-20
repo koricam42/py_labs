@@ -6,7 +6,9 @@ Starter code: N/A
 Date: 9/17/26
 """
 
-# Aliases import explanation (TBD)
+# Aliases Import Explanation 
+# Both imports have a function named calc_area, so to avoid naming conflicts,
+# I utilized aliases to differentiate the two imported functions.
 
 from rectangle import calc_area as rectangle_area, calc_perimeter
 from circle import calc_area as circle_area, calc_circumference
