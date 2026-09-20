@@ -8,14 +8,14 @@ Date: 9/17/26
 
 # Aliases import explanation (TBD)
 
-from rectangle import calc_area as rectangle_area, rectangle_perimeter
-from circle import calc_area as circle_area, circle_circumference
+from rectangle import calc_area as rectangle_area, calc_perimeter
+from circle import calc_area as circle_area, calc_circumference
 
 # I modeled the print statements to match the output of the examples in the lab instuctions
 # But I'm not sure if the print output (of the non-math sections) has to match the example perfectly
 def main():
     while True:
-        print("Geometry Calculator")
+        print("\nGeometry Calculator")
         print("-------------------")
         print("1. Calculate Circle Area")
         print("2. Calculate Circle Circumference")
@@ -23,19 +23,28 @@ def main():
         print("4. Calculate Rectangle Perimeter")
         print("5. Exit")     
 
-        user_input = input("Select and option (1-5): ")
+        user_input = input("Select an option (1-5): ")
 
-# Placeholders for 1-4
         if user_input == "1":
-            pass
+            radius = float(input("Enter the radius of the circle: "))
+            area = circle_area(radius)
+            print(f'\nThe area of the circle is: {area}')
         elif user_input == "2":
-            pass
+            radius = float(input("Enter the radius of the circle: "))
+            circumference = calc_circumference(radius)
+            print(f'\nThe circumference of the circle is: {circumference}')
         elif user_input == "3":
-            pass
+            width = float(input("Enter the width of the rectangle: "))
+            height = float(input("Enter the height of the rectangle: "))
+            area = rectangle_area(width, height)
+            print (f'\nThe area of the rectangle is: {area}')
         elif user_input == "4":
-            pass
+            width = float(input("Enter the width of the rectangle: "))
+            height = float(input("Enter the height of the rectangle: "))
+            perimeter = calc_perimeter(width, height)
+            print (f'The perimeter of the rectangle is: {perimeter}')
         elif user_input == "5":
-            print("Goodbye.")
+            print("\nGoodbye.")
             break
         else:
             print("Invalid input. Options are only 1-5. Please try again.:")
