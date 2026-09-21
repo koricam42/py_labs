@@ -38,11 +38,8 @@ def error_handler(user_text: str) -> float:
         except ValueError:
             print("Invalid input. Please enter a number.")
 
-# I modeled the print statements to match the output of the examples in the lab instuctions
-# But I'm not sure if the print output formatting (of the non-math sections) has to match the example perfectly
 def main() -> None:
     """Runs main menu loop for program, handles user inputs to calculate and display measurements"""
-    # Could potentially improve the looks of the main menu with ASCII art
     while True:
         print("\nGeometry Calculator")
         print("-------------------")
@@ -53,7 +50,6 @@ def main() -> None:
         print("5. Exit")     
 
         user_input = input("Select an option (1-5): ")
-        # Could potentially shorten this by merging the 4 options into 2,
         if user_input == "1":
             radius = error_handler("Enter the radius of the circle: ")
             area = circle_area(radius)
