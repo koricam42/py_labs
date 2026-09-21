@@ -27,6 +27,11 @@ def error_handler(user_text: str) -> float:
     while True:
         try:
             true_input = float(input(user_text))
+
+            if true_input <= 0:
+                print("Invalid input. Please enter a number greater than 0")
+                continue
+            
             return true_input
         except ValueError:
             print("Invalid input. Please enter a number.")
