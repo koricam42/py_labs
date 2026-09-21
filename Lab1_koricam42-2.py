@@ -2,7 +2,11 @@
 Program name: Geometry Calculator - main
 Author: Jordan Mensah
 Purpose: This program calculates area and perimeter or circumference of a rectangles and circles via imported functions.
-Starter code: N/A
+Starter Code (References):
+    - Overall Program Structure (CH1-11): https://learning.oreilly.com/library/view/python-crash-course/9781098156664/
+    - Type Hints: https://www.geeksforgeeks.org/python/type-hints-in-python/
+    - Exception Handling: https://www.geeksforgeeks.org/python/python-exception-handling/
+    - Output Formatting/Project Guidelines: https://courses.cscc.edu/ultra/courses/_238744_1/assessment/_28741586_1/attempt/create?courseId=_238744_1 
 Date: 9/17/26
 """
 
@@ -13,8 +17,6 @@ Date: 9/17/26
 from rectangle import calc_area as rectangle_area, calc_perimeter
 from circle import calc_area as circle_area, calc_circumference
 
-# I modeled the print statements to match the output of the examples in the lab instuctions
-# But I'm not sure if the print output formatting (of the non-math sections) has to match the example perfectly
 def error_handler(user_text: str) -> float:
     """Function to safely handle invalid user input to prevent crashing.
 
@@ -31,12 +33,16 @@ def error_handler(user_text: str) -> float:
             if true_input <= 0:
                 print("Invalid input. Please enter a number greater than 0")
                 continue
-            
+
             return true_input
         except ValueError:
             print("Invalid input. Please enter a number.")
+
+# I modeled the print statements to match the output of the examples in the lab instuctions
+# But I'm not sure if the print output formatting (of the non-math sections) has to match the example perfectly
 def main() -> None:
     """Runs main menu loop for program, handles user inputs to calculate and display measurements"""
+    # Could potentially improve the looks of the main menu with ASCII art
     while True:
         print("\nGeometry Calculator")
         print("-------------------")
@@ -47,7 +53,7 @@ def main() -> None:
         print("5. Exit")     
 
         user_input = input("Select an option (1-5): ")
-
+        # Could potentially shorten this by merging the 4 options into 2,
         if user_input == "1":
             radius = error_handler("Enter the radius of the circle: ")
             area = circle_area(radius)
