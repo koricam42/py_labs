@@ -10,9 +10,11 @@ from coin import Coin
 
 class Player():
     
-    def __init__(name):
+    def __init__(self, name):
+        self.__name = name
+        self.__wallet = 20
+        self.__coin= Coin
 
-        pass
     def toss_coin(self):
         pass
     def get_coin_side(self):
