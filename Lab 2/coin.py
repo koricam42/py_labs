@@ -9,7 +9,7 @@ from random import randint
 
 class Coin():
     def __init__(self):
-        self.__sideup() = "Heads"
+        self.__sideup = "Heads"
 
     def toss(self):
         toss = randint(0, 1)
