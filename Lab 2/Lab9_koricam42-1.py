@@ -19,7 +19,7 @@ def main():
             print(f"Player 2 has {player2.get_wallet()} coins")
             print()
 
-            player_choice = input("Do you want to flip the coins?\nInput 'Y' or 'y' to flip, 'N' or 'n' to exit the game")
+            player_choice = input("Do you want to flip the coins?\nInput 'Y' or 'y' to flip, 'N' or 'n' to stop the game")
             print()
 
             if player_choice == 'Y' or player_choice == 'y':
