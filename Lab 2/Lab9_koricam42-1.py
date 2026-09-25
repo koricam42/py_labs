@@ -10,7 +10,7 @@ Date: 9/21/26
 
 from player import Player
 
-def main():
+def main() -> None:
     """
         Main game loop/logic for the game
     """
@@ -24,7 +24,7 @@ def main():
             print(f"Player 2 has {player2.get_wallet()} coins")
             print()
 
-            player_choice = input("Do you want to flip the coins?\nInput 'Y' or 'y' to flip, 'N' or 'n' to stop the game")
+            player_choice: str = input("Do you want to flip the coins?\nInput 'Y' or 'y' to flip, 'N' or 'n' to stop the game")
             print()
 
             if player_choice == 'Y' or player_choice == 'y':
@@ -32,8 +32,8 @@ def main():
                 player1.toss_coin()
                 player2.toss_coin()
 
-                p1_side = player1.get_coin_side()
-                p2_side = player2.get_coin_side()
+                p1_side: str = player1.get_coin_side()
+                p2_side: str = player2.get_coin_side()
                 
                 print(f'Player 1 tossed {p1_side}')
                 print(f'Player 2 tossed {p2_side}')
