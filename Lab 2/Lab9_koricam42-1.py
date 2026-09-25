@@ -32,10 +32,13 @@ def main():
             print(f'Player 2 tossed {p2_side}')
 
             if p1_side == p2_side:
-                pass
+                print("Player 1 wins!")
+                player1.win_coin
+                player2.lose_coin
             else:
-                pass
-                
+                print("Player 2 wins!")
+                player1.lose_coin
+                player2.win_coin
         elif player_choice == "N" or player_choice == "n":
             print("See you later.")
             break
