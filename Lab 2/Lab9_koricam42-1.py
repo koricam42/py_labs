@@ -32,24 +32,34 @@ def main():
                 
                 print(f'Player 1 tossed {p1_side}')
                 print(f'Player 2 tossed {p2_side}')
+                print()
 
                 if p1_side == p2_side:
-                    print("Player 1 wins!")
+                    print("It's a match! Player 1 wins!")
+                    print()
                     player1.win_coin()
                     player2.lose_coin()
                 else:
-                    print("Player 2 wins!")
+                    print("It's not a match! Player 2 wins!")
+                    print()
                     player1.lose_coin()
                     player2.win_coin()
 
 
             elif player_choice == "N" or player_choice == "n":
-                print("See you later.")
                 break
             else:  
                 print("Invalid input.")
 
 
+    print("Current Score")
+    print(f'Player 1: {player1.get_wallet()}')
+    print(f'Player 2: {player2.get_wallet()}')
 
-
+    if player1.get_wallet() > player2.get_wallet():
+        print("Player 1 finished with more coins.")
+    elif player2.get_wallet() > player1.get_wallet():
+        print("Player 2 finished with more coins.")
+    else:
+         print("It's a draw.")
 main()
