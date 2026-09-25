@@ -14,39 +14,40 @@ def main():
 
     print("\nMatch Coin Game")
 
-    while True:
-        player_choice = input("Do you want to play the Match Coins Game?\nInput 'Y' or 'y' to continue, 'N' or 'n' to exit")
-        
-        if player_choice == 'Y' or player_choice == 'y':
+    while True:        
             print(f"Player 1 has {player1.get_wallet()} coins")
             print(f"Player 2 has {player2.get_wallet()} coins")
             print()
 
-            player1.toss_coin()
-            player2.toss_coin()
-
-            p1_side = player1.get_coin_side()
-            p2_side = player2.get_coin_side()
-
-
-            print(f'Player 1 tossed {p1_side}')
-            print(f'Player 2 tossed {p2_side}')
-
-            if p1_side == p2_side:
-                print("Player 1 wins!")
-                player1.win_coin
-                player2.lose_coin
-            else:
-                print("Player 2 wins!")
-                player1.lose_coin
-                player2.win_coin
-
+            player_choice = input("Do you want to flip the coins?\nInput 'Y' or 'y' to flip, 'N' or 'n' to exit the game")
             print()
-        elif player_choice == "N" or player_choice == "n":
-            print("See you later.")
-            break
-        else:  
-            print("Invalid input.")
+
+            if player_choice == 'Y' or player_choice == 'y':
+                print("Tossed!")
+                player1.toss_coin()
+                player2.toss_coin()
+
+                p1_side = player1.get_coin_side()
+                p2_side = player2.get_coin_side()
+                
+                print(f'Player 1 tossed {p1_side}')
+                print(f'Player 2 tossed {p2_side}')
+
+                if p1_side == p2_side:
+                    print("Player 1 wins!")
+                    player1.win_coin()
+                    player2.lose_coin()
+                else:
+                    print("Player 2 wins!")
+                    player1.lose_coin()
+                    player2.win_coin()
+
+
+            elif player_choice == "N" or player_choice == "n":
+                print("See you later.")
+                break
+            else:  
+                print("Invalid input.")
 
 
 
