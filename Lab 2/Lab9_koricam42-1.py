@@ -12,9 +12,10 @@ def main():
     player1 = Player("Player 1")
     player2 = Player("Player 2")
 
+    print("\nMatch Coin Game")
+
     while True:
-        print("\nMatch Coin Game")
-        player_choice = input("Do you want to play the Match Coins Game? Input 'Y' or 'y' to continue")
+        player_choice = input("Do you want to play the Match Coins Game?\nInput 'Y' or 'y' to continue, 'N' or 'n' to exit")
         
         if player_choice == 'Y' or player_choice == 'y':
             print(f"Player 1 has {player1.get_wallet()} coins")
@@ -39,6 +40,8 @@ def main():
                 print("Player 2 wins!")
                 player1.lose_coin
                 player2.win_coin
+
+            print()
         elif player_choice == "N" or player_choice == "n":
             print("See you later.")
             break
