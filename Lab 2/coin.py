@@ -17,7 +17,7 @@ class Coin():
         if toss == 0:
             self.__sideup = "Heads"
         else:
-            self.__seideip = "Tails"
+            self.__sideup = "Tails"
 
     def get_sideup(self):
         return self.__sideup
