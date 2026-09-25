@@ -8,10 +8,16 @@ Date: 9/21/26
 from random import randint
 
 class Coin():
-    def __init__(self):
+    """Class that represents a single tossable coin
+    """
+    def __init__(self) -> None:
+        """Initalizes coin with default value of heads
+        """
         self.__sideup = "Heads"
 
-    def toss(self):
+    def toss(self) -> None:
+        """Generates random number to flip coin to either heads or tails
+        """
         toss = randint(0, 1)
 
         if toss == 0:
@@ -19,5 +25,10 @@ class Coin():
         else:
             self.__sideup = "Tails"
 
-    def get_sideup(self):
+    def get_sideup(self) -> str:
+        """Returns the current face up side of the coin
+
+        Returns:
+            str: _description_
+        """
         return self.__sideup

@@ -2,13 +2,18 @@
 Program Name: Match Coins (Main)
 Author: Jordan Mensah
 Purpose: Runs main game loop, creates the objects, and manages the rules/winners
-Starter Code: N/A
+Starter Code (References): 
+    - General Info: https://learning.oreilly.com/library/view/python-crash-course/9781098156664/c09.xhtml#h1-502703c09-0001
+    - Lab Requiremnts: https://courses.cscc.edu/ultra/courses/_238744_1/assessment/_28741594_1/attempt/create/rubric-view?columnId=_6409624_1&courseId=_238744_1
 Date: 9/21/26
 """
 
 from player import Player
 
 def main():
+    """
+        Main game loop/logic for the game
+    """
     player1 = Player("Player 1")
     player2 = Player("Player 2")
 
