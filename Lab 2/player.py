@@ -13,17 +13,17 @@ class Player():
     def __init__(self, name):
         self.__name = name
         self.__wallet = 20
-        self.__coin= Coin
+        self.__coin= Coin()
 
     def toss_coin(self):
-        pass
+        self.__coin.toss()
     def get_coin_side(self):
-        return self.get_coin_side()
+        return self.__coin.get_sideup()
     def win_coin(self):
-        pass
+        self.__wallet += 1
     def lose_coin(self):
-        pass
+        self.__wallet -= 1
     def get_wallet(self):
-        pass
+        return self.__wallet
     def get_name(self):
-        pass
+        return self.__name
